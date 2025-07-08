@@ -1,7 +1,7 @@
 ## 구조
 
-- `heap_sort_demo`: 힙 정렬 실행 바이너리
-- `serde_lib`: tsn_config.json을 생성하는 직렬화/역직렬화 테스트용 라이브러리
+- `heap_sort_demo`: Heap Sort 실행 바이너리
+- `serde_lib`: tsn_config.json을 생성하는 직렬화/역직렬화 실행 바이너리
 - `serde`: 커스터마이징된 Serde (path patch로 참조 중)
 
 ## 실행 방법
