@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "heap_sort_demo",
+    "serde_lib"
+]
+
+resolver = "2"

@@ -1,5 +1,3 @@
-// use std::cmp::Ordering;
-
 fn build_heap<T: Ord>(arr: &mut [T], is_max_heap: bool) {
     if arr.len() <= 1 { return; }
     let mut i = (arr.len() - 1) / 2;
