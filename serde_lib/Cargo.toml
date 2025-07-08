@@ -1,0 +1,13 @@
+[package]
+name    = "tsn_controller_config"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde        = { version = "1.0", features = ["derive"] }       # 직/역직렬화 핵심
+serde_json   = "1.0"                                            # JSON 인코더/디코더
+serde_with   = { version = "3.8", features = ["chrono_0_4"] }   # 특수 포맷 헬퍼
+chrono       = { version = "0.4", features = ["serde"] }        # Datetime
+uuid         = { version = "1", features = ["serde", "v4"] }    # UUID
+bitflags     = { version = "2.5", features = ["serde"] }        # Gate mask 표현
+anyhow       = "1.0"                                            # 간편 오류 처리
