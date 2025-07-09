@@ -32,6 +32,38 @@ fn heapify<T: Ord>(arr: &mut [T], i: usize, is_max_heap: bool) {
     }
 }
 
+pub fn make_heap<T: Ord>(arr: &mut [T], is_max_heap: bool) {
+    if arr.len() <= 1 { return; }
+    build_heap(arr, is_max_heap);
+}
+
+use std::fmt::Debug;
+
+/// 배열을 레벨 단위로 나누어 출력해 힙 구조를 시각화
+pub fn print_tree<T: Debug>(arr: &[T]) {
+    if arr.is_empty() { return; }
+
+    let mut level = 0;
+    let mut nodes_in_level = 1;
+    let mut idx = 0;
+
+    while idx < arr.len() {
+        print!("L{}: ", level);
+
+        // 현 레벨의 노드들을 한 줄에 출력
+        let end = (idx + nodes_in_level).min(arr.len());
+        for i in idx..end {
+            print!("[{:?}] ", arr[i]);
+        }
+        println!();
+
+        // 다음 레벨로
+        idx = end;
+        nodes_in_level <<= 1; // *2
+        level += 1;
+    }
+}
+
 /// ascending == true  → 오름차순 결과  
 /// ascending == false → 내림차순 결과
 pub fn heap_sort<T: Ord>(arr: &mut [T], ascending: bool) {

@@ -4,4 +4,4 @@ members = [
     "serde_lib"
 ]
 
-resolver = "2"
+resolver = "2" 
